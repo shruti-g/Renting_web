@@ -30,7 +30,6 @@
     {
       $query = "INSERT INTO items (username, email, itemname,itemdetails) VALUES('$username', '$email', '$itemname','$itemdetails')";
       mysqli_query($db, $query);
-      header('location: index.php');
     }
-  }
+  
 ?>
