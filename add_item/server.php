@@ -2,13 +2,16 @@
   session_start();
 
   $username = $_SESSION['username'];
-
+  $itemname="";
+  $itemdetails="";
+  $errors = array(); 
+  
   $user_check_query = "SELECT * FROM users WHERE username='$username LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
 
   $email =$user['email'];
-  $errors = array(); 
+  
 
   $db = mysqli_connect('localhost', 'root', '', 'rent');
 
